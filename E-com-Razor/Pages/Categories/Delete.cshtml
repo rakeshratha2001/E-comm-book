@@ -1,0 +1,31 @@
+﻿@page
+@model E_com_Razor.Pages.Categories.DeleteModel
+
+ <form method="post">
+    <input asp-for="category.Id" hidden />
+    <div class="row">
+        <h2 class="text-primary">Delete Category</h2>
+        </hr>
+    </div>
+    <div class="border p-3 mt-4">
+        @*
+        @ <div asp-validation-summary="All" class="text-danger"></div> // command line
+        *@
+        <div class="mb-3 row p-1">
+            <label asp-for="category.Name" class="p-0"></label>
+            <input asp-for="category.Name" disabled class="form-control text-danger" />
+         </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="category.DisplayOrder" class="p-0"> </label>
+            <input asp-for="category.DisplayOrder" disabled class="form-control text-danger" />
+         </div>
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-danger form-control">Delete</button>
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-page="/categories/index" class="btn btn-outline-secondary border-black form-control">Back To List</a>
+            </div>
+        </div>
+    </div>
+</form>
